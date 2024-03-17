@@ -45,12 +45,27 @@ def get_dynamic_fork_parameter():
         "dynamicTasksInput": {
             "MaSubWorkflow_Test_F12KK7": {
                 "dbname": "F12KK7",
+                "db_info": {
+                    "hostname": "testserver1",
+                    "dbname": "F12KK7",
+                    "instance": "isttest",
+                }
             },
             "MaSubWorkflow_Test_F12KK8": {
                 "dbname": "F12KK8",
+                "db_info": {
+                    "hostname": "testserver2",
+                    "dbname": "F12KK8",
+                    "instance": "isttest",
+                }
             },
             "MaSubWorkflow_Test_F12KK9": {
                 "dbname": "F12KK9",
+                "db_info": {
+                    "hostname": "testserver3",
+                    "dbname": "F12KK9",
+                    "instance": "isttest",
+                }
             },
         },
     }
