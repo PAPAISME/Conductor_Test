@@ -23,10 +23,10 @@ def get_dynamic_fork_parameter():
                 "taskReferenceName": "MaSubWorkflow_Test_F12KK7",
                 "type": "SUB_WORKFLOW",
                 "inputParameters": {
-                    "db_info":{
+                    "db_info": {
                         "hostname": "testserver1",
                         "dbname": "F12KK7",
-                        "instance": "isttest"
+                        "instance": "isttest",
                     }
                 },
             },
@@ -39,10 +39,10 @@ def get_dynamic_fork_parameter():
                 "taskReferenceName": "MaSubWorkflow_Test_F12KK8",
                 "type": "SUB_WORKFLOW",
                 "inputParameters": {
-                    "db_info":{
+                    "db_info": {
                         "hostname": "testserver2",
                         "dbname": "F12KK8",
-                        "instance": "isttest"
+                        "instance": "isttest",
                     }
                 },
             },
@@ -55,10 +55,10 @@ def get_dynamic_fork_parameter():
                 "taskReferenceName": "MaSubWorkflow_Test_F12KK9",
                 "type": "SUB_WORKFLOW",
                 "inputParameters": {
-                    "db_info":{
+                    "db_info": {
                         "hostname": "testserver3",
                         "dbname": "F12KK9",
-                        "instance": "isttest"
+                        "instance": "isttest",
                     }
                 },
             },
