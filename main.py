@@ -40,7 +40,7 @@ def get_dynamic_fork_parameter():
             },
         ],
         "dynamicTasksInput": {
-            "MaSubWorkflow_Test_F12KK8": {
+            "MaSubWorkflow_Test_F12KK7": {
                 "dbname": "F12KK7",
             },
             "MaSubWorkflow_Test_F12KK8": {
