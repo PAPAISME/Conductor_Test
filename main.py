@@ -24,7 +24,7 @@ def get_dynamic_fork_parameter():
                 "type": "SUB_WORKFLOW",
                 "inputParameters": {
                     "db_info":{
-                        "hostname": "1.1.1.1",
+                        "hostname": "testserver1",
                         "dbname": "F12KK7",
                         "instance": "isttest"
                     }
@@ -40,7 +40,7 @@ def get_dynamic_fork_parameter():
                 "type": "SUB_WORKFLOW",
                 "inputParameters": {
                     "db_info":{
-                        "hostname": "2.2.2.2",
+                        "hostname": "testserver2",
                         "dbname": "F12KK8",
                         "instance": "isttest"
                     }
@@ -56,7 +56,7 @@ def get_dynamic_fork_parameter():
                 "type": "SUB_WORKFLOW",
                 "inputParameters": {
                     "db_info":{
-                        "hostname": "3.3.3.3",
+                        "hostname": "testserver3",
                         "dbname": "F12KK9",
                         "instance": "isttest"
                     }
@@ -80,3 +80,11 @@ def get_dynamic_fork_parameter():
 @app.get("/api/{dbname}")
 def get_dbname(dbname: str):
     return {"dbname": dbname}
+
+@app.get("/api/{dbname}/{hostname}/{instance}")
+def get_dbname(dbname: str, hostname: str, instance: str):
+    return "db_info":{
+        "hostname": hostname,
+        "dbname": dbname,
+        "instance": instance
+    }
