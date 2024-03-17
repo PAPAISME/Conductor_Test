@@ -81,7 +81,7 @@ def get_dynamic_fork_parameter():
 def get_dbname(dbname: str):
     return {"dbname": dbname}
 
-@app.get("/api/{dbname}/{hostname}/{instance}")
+@app.get("/api/info/{dbname}/{hostname}/{instance}")
 def get_all_info(dbname: str, hostname: str, instance: str):
     return {"hostname": hostname,
             "dbname": dbname,
