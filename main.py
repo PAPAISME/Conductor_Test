@@ -83,8 +83,7 @@ def get_dbname(dbname: str):
 
 @app.get("/api/{dbname}/{hostname}/{instance}")
 def get_dbname(dbname: str, hostname: str, instance: str):
-    return "db_info":{
-        "hostname": hostname,
-        "dbname": dbname,
-        "instance": instance
-    }
+    return {"hostname": hostname,
+            "dbname": dbname,
+            "instance": instance
+           }
