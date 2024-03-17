@@ -20,6 +20,14 @@ def get_dynamic_fork_parameter():
                     "version": "1",
                 },
                 "type": "SUB_WORKFLOW",
+                "taskReferenceName": "MaSubWorkflow_Test_F12KK7",
+            },
+            {
+                "subWorkflowParam": {
+                    "name": "MaSubWorkflow_Test",
+                    "version": "1",
+                },
+                "type": "SUB_WORKFLOW",
                 "taskReferenceName": "MaSubWorkflow_Test_F12KK8",
             },
             {
@@ -32,6 +40,9 @@ def get_dynamic_fork_parameter():
             },
         ],
         "dynamicTasksInput": {
+            "MaSubWorkflow_Test_F12KK8": {
+                "dbname": "F12KK7",
+            },
             "MaSubWorkflow_Test_F12KK8": {
                 "dbname": "F12KK8",
             },
