@@ -19,24 +19,48 @@ def get_dynamic_fork_parameter():
                     "name": "MaSubWorkflow_Test",
                     "version": "1",
                 },
-                "type": "SUB_WORKFLOW",
+                "name": "MaSubWorkflow_Test_F12KK7",
                 "taskReferenceName": "MaSubWorkflow_Test_F12KK7",
+                "type": "SUB_WORKFLOW",
+                "inputParameters": {
+                    "db_info":{
+                        "hostname": "1.1.1.1",
+                        "dbname": "F12KK7",
+                        "instance": "isttest"
+                    }
+                },
             },
             {
                 "subWorkflowParam": {
                     "name": "MaSubWorkflow_Test",
                     "version": "1",
                 },
-                "type": "SUB_WORKFLOW",
+                "name": "MaSubWorkflow_Test_F12KK8",
                 "taskReferenceName": "MaSubWorkflow_Test_F12KK8",
+                "type": "SUB_WORKFLOW",
+                "inputParameters": {
+                    "db_info":{
+                        "hostname": "2.2.2.2",
+                        "dbname": "F12KK8",
+                        "instance": "isttest"
+                    }
+                },
             },
             {
                 "subWorkflowParam": {
                     "name": "MaSubWorkflow_Test",
                     "version": "1",
                 },
-                "type": "SUB_WORKFLOW",
+                "name": "MaSubWorkflow_Test_F12KK9",
                 "taskReferenceName": "MaSubWorkflow_Test_F12KK9",
+                "type": "SUB_WORKFLOW",
+                "inputParameters": {
+                    "db_info":{
+                        "hostname": "3.3.3.3",
+                        "dbname": "F12KK9",
+                        "instance": "isttest"
+                    }
+                },
             },
         ],
         "dynamicTasksInput": {
