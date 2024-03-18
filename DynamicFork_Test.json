@@ -1,0 +1,82 @@
+{
+  "createTime": 1710582119268,
+  "updateTime": 1710603802385,
+  "name": "DynamicFork_Test",
+  "description": "Practice dynamic fork",
+  "version": 1,
+  "tasks": [
+    {
+      "name": "http_ma_test",
+      "taskReferenceName": "http_ma_test",
+      "inputParameters": {
+        "uri": "https://conductor-test.onrender.com/api",
+        "method": "GET",
+        "connectionTimeOut": 3000,
+        "readTimeOut": "3000",
+        "accept": "application/json",
+        "contentType": "application/json"
+      },
+      "type": "HTTP",
+      "decisionCases": {},
+      "defaultCase": [],
+      "forkTasks": [],
+      "startDelay": 0,
+      "joinOn": [],
+      "optional": false,
+      "defaultExclusiveJoinTask": [],
+      "asyncComplete": false,
+      "loopOver": [],
+      "onStateChange": {}
+    },
+    {
+      "name": "fork_join_dynamic",
+      "taskReferenceName": "fork_join_dynamic_ref",
+      "inputParameters": {
+        "dynamicTasks": "${http_ma_test.output.response.body.dynamictasks}",
+        "dynamicTasksInput": "${http_ma_test.output.response.body.dynamicTasksInput}"
+      },
+      "type": "FORK_JOIN_DYNAMIC",
+      "decisionCases": {},
+      "dynamicForkTasksParam": "dynamicTasks",
+      "dynamicForkTasksInputParamName": "dynamicTasksInput",
+      "defaultCase": [],
+      "forkTasks": [],
+      "startDelay": 0,
+      "joinOn": [],
+      "optional": false,
+      "defaultExclusiveJoinTask": [],
+      "asyncComplete": false,
+      "loopOver": [],
+      "onStateChange": {}
+    },
+    {
+      "name": "join",
+      "taskReferenceName": "join_ref",
+      "inputParameters": {},
+      "type": "JOIN",
+      "decisionCases": {},
+      "defaultCase": [],
+      "forkTasks": [],
+      "startDelay": 0,
+      "joinOn": [],
+      "optional": false,
+      "defaultExclusiveJoinTask": [],
+      "asyncComplete": false,
+      "loopOver": [],
+      "onStateChange": {}
+    }
+  ],
+  "inputParameters": [
+    "host"
+  ],
+  "outputParameters": {},
+  "failureWorkflow": "",
+  "schemaVersion": 2,
+  "restartable": true,
+  "workflowStatusListenerEnabled": false,
+  "ownerEmail": "bluetotti59@gmail.com",
+  "timeoutPolicy": "ALERT_ONLY",
+  "timeoutSeconds": 0,
+  "variables": {},
+  "inputTemplate": {}
+}
