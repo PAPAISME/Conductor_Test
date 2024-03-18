@@ -1,0 +1,61 @@
+{
+  "createTime": 1710601535326,
+  "updateTime": 1710690957282,
+  "name": "MaSubWorkflow_Test",
+  "description": "MaSubWorkflow_Test",
+  "version": 1,
+  "tasks": [
+    {
+      "name": "set_variable",
+      "taskReferenceName": "set_variable_ref",
+      "inputParameters": {
+        "test_name": "${workflow.input.dbname}"
+      },
+      "type": "SET_VARIABLE",
+      "decisionCases": {},
+      "defaultCase": [],
+      "forkTasks": [],
+      "startDelay": 0,
+      "joinOn": [],
+      "optional": false,
+      "defaultExclusiveJoinTask": [],
+      "asyncComplete": false,
+      "loopOver": [],
+      "onStateChange": {}
+    },
+    {
+      "name": "http_ma_subworkflow_task2",
+      "taskReferenceName": "http_ma_subworkflow_task2",
+      "inputParameters": {
+        "uri": "https://conductor-test.onrender.com/api/info/${workflow.variables.test_name}/${workflow.input.db_info.hostname}/${workflow.input.db_info.instance}",
+        "method": "GET",
+        "connectionTimeOut": 3000,
+        "readTimeOut": "3000",
+        "accept": "application/json",
+        "contentType": "application/json"
+      },
+      "type": "HTTP",
+      "decisionCases": {},
+      "defaultCase": [],
+      "forkTasks": [],
+      "startDelay": 0,
+      "joinOn": [],
+      "optional": false,
+      "defaultExclusiveJoinTask": [],
+      "asyncComplete": false,
+      "loopOver": [],
+      "onStateChange": {}
+    }
+  ],
+  "inputParameters": [],
+  "outputParameters": {},
+  "failureWorkflow": "",
+  "schemaVersion": 2,
+  "restartable": true,
+  "workflowStatusListenerEnabled": false,
+  "ownerEmail": "bluetotti59@gmail.com",
+  "timeoutPolicy": "ALERT_ONLY",
+  "timeoutSeconds": 0,
+  "variables": {},
+  "inputTemplate": {}
+}
